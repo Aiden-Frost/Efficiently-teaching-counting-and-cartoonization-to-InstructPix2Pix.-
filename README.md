@@ -1,8 +1,8 @@
 
 # 🚀 Efficiently Teaching Counting and Cartoonization with InstructPix2Pix 
 
-**Dataset Link:**
-  [![Dataset](https://img.shields.io/badge/Dataset-counting-dataset.svg)](https://huggingface.co/datasets/RahulRaman/final-counting-dataset)
+**Dataset and Paper Link:**
+  [![Dataset](https://img.shields.io/badge/Dataset-counting-dataset.svg)](https://huggingface.co/datasets/RahulRaman/final-counting-dataset)  [![Paper](https://img.shields.io/badge/Paper-Project-orange.svg)](https://github.com/Aiden-Frost/Efficiently-teaching-counting-and-cartoonization-to-InstructPix2Pix.-/blob/main/ak11089_rr4549_rss9311_Efficiently%20teaching%20counting%20and%20cartoonization%20to%20InstructPix2Pix.pdf)
 
 Train your own model with your dataset using LORA InstructPix2Pix:
 
