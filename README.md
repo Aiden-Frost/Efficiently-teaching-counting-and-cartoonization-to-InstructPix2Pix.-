@@ -1,6 +1,9 @@
 
 # 🚀 Efficiently Teaching Counting and Cartoonization with InstructPix2Pix 
 
+**Dataset Link:**
+  [![Dataset](https://img.shields.io/badge/Dataset-counting-dataset.svg)](https://huggingface.co/datasets/RahulRaman/final-counting-dataset)
+
 Train your own model with your dataset using LORA InstructPix2Pix:
 
 - **Minimum GPU Requirements:** 15 GB (Google Colab T4 GPU is the baseline)
