@@ -1,0 +1,1 @@
+python your_script.py --model_id "timbrooks/instruct-pix2pix" --lora_weight_path "PATH-TO-LORA-WEIGHT" --image_path "IMAGE-PATH" --edit_prompt "EDIT-PROMPT"

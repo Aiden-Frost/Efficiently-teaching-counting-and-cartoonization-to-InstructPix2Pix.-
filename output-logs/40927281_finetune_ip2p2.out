@@ -1,0 +1,44 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+12/17/2023 11:12:39 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+{'variance_type', 'clip_sample_range', 'timestep_spacing'} was not found in config. Values will be initialized to default values.
+{'scaling_factor', 'force_upcast'} was not found in config. Values will be initialized to default values.
+{'time_cond_proj_dim', 'encoder_hid_dim_type', 'class_embeddings_concat', 'conv_out_kernel', 'addition_embed_type_num_heads', 'reverse_transformer_layers_per_block', 'mid_block_only_cross_attention', 'addition_time_embed_dim', 'addition_embed_type', 'dropout', 'cross_attention_norm', 'projection_class_embeddings_input_dim', 'time_embedding_act_fn', 'conv_in_kernel', 'time_embedding_dim', 'time_embedding_type', 'num_attention_heads', 'encoder_hid_dim', 'attention_type', 'transformer_layers_per_block', 'resnet_skip_time_act', 'resnet_out_scale_factor', 'timestep_post_act'} was not found in config. Values will be initialized to default values.
+Downloading readme:   0%|          | 0.00/366 [00:00<?, ?B/s]Downloading readme: 100%|██████████| 366/366 [00:00<00:00, 5.31MB/s]
+Downloading data files:   0%|          | 0/1 [00:00<?, ?it/s]
+Downloading data:   0%|          | 0.00/23.7M [00:00<?, ?B/s][A
+Downloading data:  18%|█▊        | 4.19M/23.7M [00:00<00:01, 12.9MB/s][A
+Downloading data:  53%|█████▎    | 12.6M/23.7M [00:00<00:00, 13.8MB/s][A
+Downloading data:  88%|████████▊ | 21.0M/23.7M [00:01<00:00, 18.3MB/s][ADownloading data: 100%|██████████| 23.7M/23.7M [00:01<00:00, 19.1MB/s]
+Downloading data files: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]Downloading data files: 100%|██████████| 1/1 [00:01<00:00,  1.24s/it]
+Extracting data files:   0%|          | 0/1 [00:00<?, ?it/s]Extracting data files: 100%|██████████| 1/1 [00:00<00:00, 201.29it/s]
+Generating train split:   0%|          | 0/496 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 496/496 [00:00<00:00, 3436.61 examples/s]Generating train split: 100%|██████████| 496/496 [00:00<00:00, 3282.95 examples/s]
+Traceback (most recent call last):
+  File "/scratch/rr4549/temp/finetune3.py", line 1132, in <module>
+    main()
+  File "/scratch/rr4549/temp/finetune3.py", line 706, in main
+    raise ValueError(
+ValueError: --edited_image_column' value 'output_image' needs to be one of: input_image, edit_prompt, edited_image
+Traceback (most recent call last):
+  File "/ext3/miniconda3/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ext3/miniconda3/lib/python3.11/site-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/ext3/miniconda3/lib/python3.11/site-packages/accelerate/commands/launch.py", line 1017, in launch_command
+    simple_launcher(args)
+  File "/ext3/miniconda3/lib/python3.11/site-packages/accelerate/commands/launch.py", line 637, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/ext3/miniconda3/bin/python', 'temp/finetune3.py', '--pretrained_model_name_or_path=timbrooks/instruct-pix2pix', '--dataset_name=RahulRaman/counting-object-sd-dataset5-clean5', '--enable_xformers_memory_efficient_attention', '--resolution=256', '--random_flip', '--train_batch_size=32', '--gradient_accumulation_steps=4', '--gradient_checkpointing', '--num_train_epochs=100', '--checkpointing_steps=20', '--resume_from_checkpoint=latest', '--checkpoints_total_limit=100', '--learning_rate=5e-05', '--lr_warmup_steps=0', '--original_image_column=input_image', '--edit_prompt_column=edit_prompt', '--edited_image_column=output_image', '--val_image_url=https://previews.123rf.com/images/atoss/atoss1301/atoss130100101/17365452-three-bananas-isolated-on-white-background-clipping-path.jpg', '--validation_prompt=Add 1 banana.', '--seed=42', '--output_dir=model-counting-dataset5', '--report_to=wandb', '--push_to_hub']' returned non-zero exit status 1.
